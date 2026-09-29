@@ -315,13 +315,14 @@ footer { padding: 70px 0 25px; background: #0d1828; color: #bec7d3; }
   color: var(--muted);
   font-size: 15px;
 }
-/* Sponsor Logo Sizing */
+/* UNIFORM SPONSOR LOGO SIZING */
 
-.sponsor-card img {
-  width: 100%;
-  max-width: 220px;
-  height: 130px;
-  object-fit: contain;
-  display: block;
-  margin: 0 auto 18px;
+.sponsor-grid .sponsor-card img {
+    width: 180px !important;
+    max-width: 100% !important;
+    height: 100px !important;
+    max-height: 100px !important;
+    object-fit: contain !important;
+    display: block !important;
+    margin: 0 auto 15px !important;
 }
