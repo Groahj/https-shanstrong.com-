@@ -315,14 +315,77 @@ footer { padding: 70px 0 25px; background: #0d1828; color: #bec7d3; }
   color: var(--muted);
   font-size: 15px;
 }
-/* UNIFORM SPONSOR LOGO SIZING */
+/* ===================================
+   SHAN STRONG - SPONSOR GRID FIX
+=================================== */
 
+/* Arrange sponsors in compact rows */
+.sponsor-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 20px !important;
+    align-items: stretch !important;
+    margin: 25px 0 40px !important;
+}
+
+/* Uniform sponsor cards */
+.sponsor-grid .sponsor-card {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    min-width: 0 !important;
+    height: auto !important;
+    min-height: 210px !important;
+    max-height: 240px !important;
+
+    padding: 20px !important;
+    text-align: center !important;
+    overflow: hidden !important;
+}
+
+/* Uniform logo display */
 .sponsor-grid .sponsor-card img {
-    width: 180px !important;
-    max-width: 100% !important;
-    height: 100px !important;
-    max-height: 100px !important;
-    object-fit: contain !important;
     display: block !important;
-    margin: 0 auto 15px !important;
+
+    width: 100% !important;
+    max-width: 200px !important;
+
+    height: 95px !important;
+    max-height: 95px !important;
+
+    object-fit: contain !important;
+    object-position: center !important;
+
+    margin: 0 auto 12px !important;
+    flex-shrink: 0 !important;
+}
+
+/* Sponsor name */
+.sponsor-grid .sponsor-card h3 {
+    margin: 0 0 5px !important;
+    font-size: 17px !important;
+    text-align: center !important;
+}
+
+/* Sponsorship level */
+.sponsor-grid .sponsor-card p {
+    margin: 0 !important;
+    font-size: 12px !important;
+    text-align: center !important;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    .sponsor-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .sponsor-grid {
+        grid-template-columns: 1fr !important;
+    }
 }
