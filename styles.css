@@ -392,3 +392,74 @@ footer { padding: 70px 0 25px; background: #0d1828; color: #bec7d3; }
 .sponsor-card {
     background: #ffb6c1 !important;
 }
+
+/* ========================================
+   SHAN STRONG - SPONSOR GRID LAYOUT
+======================================== */
+
+/* Main sponsor grid */
+.sponsor-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 20px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    align-items: stretch !important;
+}
+
+/* Every sponsor gets one equal-sized card */
+.sponsor-grid > .sponsor-card {
+    grid-column: auto !important;
+    grid-row: auto !important;
+    width: 100% !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    height: auto !important;
+    min-height: 190px !important;
+    max-height: none !important;
+    box-sizing: border-box !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    padding: 20px !important;
+    text-align: center !important;
+    overflow: hidden !important;
+}
+
+/* Logo sizing */
+.sponsor-grid > .sponsor-card img {
+    width: 180px !important;
+    max-width: 100% !important;
+    height: 95px !important;
+    object-fit: contain !important;
+    margin: 0 auto 12px !important;
+}
+
+/* Sponsor names */
+.sponsor-grid > .sponsor-card h3 {
+    margin: 0 0 6px !important;
+    text-align: center !important;
+}
+
+/* Sponsorship descriptions */
+.sponsor-grid > .sponsor-card p {
+    margin: 0 !important;
+    text-align: center !important;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    .sponsor-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .sponsor-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
