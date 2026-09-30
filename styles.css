@@ -389,3 +389,6 @@ footer { padding: 70px 0 25px; background: #0d1828; color: #bec7d3; }
         grid-template-columns: 1fr !important;
     }
 }
+.sponsor-card {
+    background: #ffb6c1 !important;
+}
